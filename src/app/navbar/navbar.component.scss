@@ -1,0 +1,53 @@
+
+.myNavbar {
+    font-family: 'DM Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    height: 100px; 
+    
+    
+    .nav-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-direction: row;
+        row-gap: 5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+       
+
+        .flex-start a {
+            font-size: 28px;
+            padding-left: 1rem;
+            color: white;
+            
+            &:hover {
+                color: lightgray;
+            }
+        }
+
+        .flex-center a {
+            font-size: 600;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: lightgray;
+            }
+        }
+
+        .flex-end a {
+            font-size: large;
+            width: 140px;
+            color: white;
+
+            &:hover {
+                color: lightgray;
+            }
+        }
+    }
+}

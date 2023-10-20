@@ -1,0 +1,28 @@
+
+<div class="content-wraper">
+    <div *ngIf="content">
+        <div class="prev">
+            <img src="{{content.imageMain}}" alt="{{ content.title }}">
+            <h4>{{content.header}}</h4>
+        </div>
+        <div class="head">
+            <h3>{{ content.title }}</h3>
+            <h4> {{content.description}}</h4>
+            <h4 *ngIf="content.description1">{{content.description1}}</h4>
+        </div>
+        <div class="main">
+            <p>{{content.description2}}</p>
+            <div class="firstImgBlock">
+                <img src="{{content.image1}}" alt="">
+                <img src="{{content.image2}}" alt="">
+            </div>
+            <div class="mainText">
+                <p><img src="{{content.description3}}" alt=""></p>
+            </div>
+            <div class="secondImgBlock">
+                <img src="{{content.image3}}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,100 @@
+
+<div class="myDiv">
+    <div  id="carouselExampleFade" class="carousel slide carousel-fade myCarousel">
+        <!-- <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div> -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://openhouse-magazine.com/wp-content/uploads/img_7970.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-#one d-md-block">
+                <p>Art&Cuiture, Travel</p>
+                <h4>Japan by Cesar Bejar</h4>
+                <h4>In search of the anachronism</h4>
+                <h4 class="last">in the image</h4>
+                <a routerLink="/content/0">Read more</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://openhouse-magazine.com/wp-content/uploads/landscape-openhouse-15.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <p>Art&Cuiture, Travel</p>
+                <h4>The longlasting relationship</h4>
+                <h4 class="last">with one's landscape</h4>
+                <a routerLink="/content/1">Read more</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://cdn.pixabay.com/photo/2017/05/05/15/06/architecture-2287327_1280.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <p>Architecture</p>
+                <h4>De Cotiis</h4>
+                <h4 class="last">Architecture is a living thing</h4>
+                <a routerLink="/content/2">Read more</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://openhouse-magazine.com/wp-content/uploads/tomo_yarmush-220624133333-6871-1-scaled.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <p>Art&Cuiture, People</p>
+                <h4>Paul Bik</h4>
+                <h4 class="last">The most personal form of art</h4>
+                <a routerLink="/content/3">Read more</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://openhouse-magazine.com/wp-content/uploads/studio_andrew_trotter_casa_soleto_salva_lopez_puglia_310-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <p>Architecture, Art&Cuiture</p>
+                <h4>Casa Soleto</h4>
+                <h4>Shaping life through</h4>
+                <h4 class="last">architecture</h4>
+                <a routerLink="/content/4">Read more</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://openhouse-magazine.com/wp-content/uploads/casamollino-fabianml-01.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <p>Architecture, Art&Cuiture</p>
+                <h4>Elegance and Eclecticism</h4>
+                <h4 class="last">The Home of Carlo Mollino</h4>
+                <a routerLink="/content/5">Read more</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="myGrid">
+                    <div class="card myCard m-4" *ngFor="let part of content; index as contentID">
+                      <img src="{{part.image}}" class="card-img-top" alt="{{part.title}}">
+                      <div class="overlay">
+                        <a routerLink="/content/{{contentID}}" class="overlay-text">Explore</a>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">{{part.title}}</h5>
+                        <p class="card-text text-des">{{part.description}}</p>
+                        <p class="card-text text-sorce">{{part.source}}</p>
+                      </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

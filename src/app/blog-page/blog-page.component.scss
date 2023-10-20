@@ -1,0 +1,123 @@
+
+
+.myDiv {
+    margin: 0;
+    padding: 0;
+
+    .myCarousel {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+
+        img {
+            background-size: cover;
+            position: relative;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 45vh;
+            left: 17vw;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: large;
+
+            p {
+                padding-bottom: 1rem;
+            }
+
+            .last {
+                padding-bottom: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                
+                &:hover {
+                    color: lightgray;
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-top: 7rem;
+        max-width: 1200px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        .myGrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 10vw;
+            margin: 0 2rem;
+
+            .myCard{
+                width: 400px;
+                height: 800px;
+                border: none;
+                position: relative;
+
+                &:hover .overlay {
+                    opacity: 0.5;
+                    height: 600px;
+                  }
+
+                img{
+                    height: 600px;
+                    display: block;
+                    width: 100%;
+                }
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 600px;
+                    width: 100%;
+                    opacity: 0;
+                    transition: .5s ease;
+                    background-color: white;
+
+                    .overlay-text {
+                        text-decoration: none;
+                        color: rgb(0, 0, 0);
+                        font-size: 20px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                    }
+                }
+
+                .card-body {
+                    h5 {
+                        text-align: center;
+                        font-size: 22px;
+                    }
+
+                    .text-des {
+                        text-align: center;
+                        font-size: 18px;
+                        padding: 10px 0 5px 0;
+                    }
+
+                    .text-sorce {
+                        text-align: center;
+                        color: dimgray;
+                    }
+                }
+            }
+        }
+       
+    }
+}
